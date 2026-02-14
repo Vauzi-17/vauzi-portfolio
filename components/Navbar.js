@@ -10,7 +10,7 @@ export default function Navbar() {
       <NavItem href="/" icon={<Home size={22} />} label="Home" />
       <NavItem href="/" icon={<User size={22} />} label="About" />
       <NavItem href="/projects" icon={<Folder size={22} />} label="Projects" />
-      <NavItem href="/" icon={<Mail size={22} />} label="Contact" />
+      <NavItem href="/contact" icon={<Mail size={22} />} label="Contact" />
 
     </div>
   );

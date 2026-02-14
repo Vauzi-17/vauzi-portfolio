@@ -5,7 +5,7 @@ import Link from "next/link";
 export default function Cv() {
   return (
     <Link
-      href="/cv.pdf"
+      href="/CV.pdf"
       target="_blank"
       className="inline-block px-6 py-3 
                  bg-white text-black 
