@@ -1,1 +1,1 @@
-[text](https://vauzi-portfolio.vercel.app/)
+[Vauzi Portfolio](https://vauzi-portfolio.vercel.app/)
