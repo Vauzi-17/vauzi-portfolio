@@ -1,6 +1,13 @@
 export default function Footer() {
   return (
-    <footer className="w-full border-t border-gray-800 py-6 text-center text-sm text-gray-400 mb-20">
+    <footer
+      className="
+        w-full py-6 text-center text-sm mb-20
+        border-t border-main
+        text-muted
+        bg-main
+      "
+    >
       © 2026 Vauzi Tri Utomo. All rights reserved.
     </footer>
   );
