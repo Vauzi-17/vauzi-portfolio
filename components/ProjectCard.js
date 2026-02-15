@@ -3,11 +3,12 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 
-export default function ProjectCard({ project }) {
+export default function ProjectCard({ project, onClick }) {
   return (
     <motion.div
       whileHover={{ scale: 1.05 }}
-      className="bg-neutral-900 border border-gray-700 rounded-xl overflow-hidden shadow-lg transition"
+      onClick={onClick}
+      className="cursor-pointer bg-neutral-900 border border-gray-700 rounded-xl overflow-hidden shadow-lg transition"
     >
       <Image
         src={project.image}
@@ -26,17 +27,9 @@ export default function ProjectCard({ project }) {
           {project.description}
         </p>
 
-        <p className="text-xs text-gray-500 mb-4">
+        <p className="text-xs text-gray-500">
           {project.tech}
         </p>
-
-        <a
-          href={project.link}
-          target="_blank"
-          className="inline-block text-sm font-medium text-white border border-white px-4 py-2 rounded-lg hover:bg-white hover:text-black transition"
-        >
-          View Project
-        </a>
       </div>
     </motion.div>
   );
