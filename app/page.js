@@ -7,6 +7,7 @@ import Navbar from "@/components/Navbar";
 import Social from "@/components/Social";
 import Cv from "@/components/Cv";
 import Foto from "@/components/Foto";
+import See from "@/components/See";
 
 export default function Home() {
 return (
@@ -20,29 +21,27 @@ return (
     </motion.div>
 
     <motion.h1 variants={item} className="text-4xl font-bold text-center">
-      Halo
+      Vauzi Tri Utomo
     </motion.h1>
 
-    <motion.h1 variants={item} className="text-4xl font-bold text-center">
-      Aku Vauzi Tri Utomo
+    <motion.h1 variants={item} className="text-lg text-gray-400 font-bold text-center">
+      Web Developer Student | Aspiring Full Stack Developer
     </motion.h1>
 
     <motion.p variants={item} className="text-lg text-gray-600 max-w-lg text-justify leading-relaxed">
-      Aku seorang siswa SMK yang sedang belajar pemrograman web. Aku suka membuat aplikasi web yang menarik dan
-      bermanfaat bagi banyak orang. Selain itu, aku juga senang mempelajari teknologi baru dan selalu mengikuti
-      perkembangan dunia IT agar tidak tertinggal. Di waktu luang, aku suka bermain game Mobile Legends sebagai hiburan
-      sekaligus melatih strategi dan kerja sama tim.
+      I am a web programming student passionate about building engaging and useful web applications. I continuously learn new technologies to improve my skills and stay updated with industry trends.
     </motion.p>
 
     <motion.div variants={item}>
       <Social />
     </motion.div>
 
-    <motion.div variants={item}>
+    <motion.div variants={item} className="flex gap-6">
       <Cv />
+      <See />
     </motion.div>
 
-    
+
 
   </motion.main>
 </>

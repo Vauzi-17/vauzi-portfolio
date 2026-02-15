@@ -17,10 +17,17 @@ export default function Contact() {
       >
         <motion.h1
           variants={item}
-          className="text-4xl font-bold text-center mb-12"
+          className="text-4xl font-bold text-center mb-6"
         >
           Contact Me
         </motion.h1>
+
+        <motion.p
+          variants={item}
+          className="text-base text-center mb-12 text-gray-600 max-w-2xl mx-auto leading-relaxed"
+        >
+          Feel free to reach out if you would like to collaborate, discuss a project, or simply connect. I am open to opportunities and always excited to work on meaningful projects.
+        </motion.p>
 
         <motion.form
           variants={item}

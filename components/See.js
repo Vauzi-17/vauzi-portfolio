@@ -2,11 +2,10 @@
 
 import Link from "next/link";
 
-export default function Cv() {
+export default function See() {
   return (
     <Link
-      href="/CV.pdf"
-      target="_blank"
+      href="/projects"
       className="inline-block px-6 py-3 
                  bg-white text-black 
                  border-2 border-white 
@@ -14,8 +13,7 @@ export default function Cv() {
                  transition-all duration-300
                  hover:bg-black hover:text-white"
     >
-      Download CV
+      See My Work
     </Link>
   );
 }
-
