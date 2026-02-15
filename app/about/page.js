@@ -3,16 +3,14 @@
 import { motion } from "framer-motion";
 import { container, item } from "@/lib/animations";
 import Navbar from "@/components/Navbar";
-import Foto from "@/components/Foto";
 
 export default function About() {
-
   const skills = [
-    { name: "Next.js", level: 75 },
-    { name: "React", level: 70 },
-    { name: "Tailwind CSS", level: 80 },
-    { name: "Unity", level: 65 },
-    { name: "JavaScript", level: 75 },
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "Kotlin",
+    "Unity (Basic)",
   ];
 
   return (
@@ -23,70 +21,58 @@ export default function About() {
         variants={container}
         initial="hidden"
         animate="show"
-        className="min-h-screen px-6 py-24 flex flex-col items-center space-y-20"
+        className="min-h-screen px-6 py-24 bg-main"
       >
-        {/* Title */}
-        <motion.h1
-          variants={item}
-          className="text-4xl font-bold text-center"
-        >
-          About Me
-        </motion.h1>
+        <div className="max-w-4xl mx-auto space-y-16">
+          {/* Title */}
+          <motion.h1
+            variants={item}
+            className="text-4xl md:text-5xl font-bold text-center text-main"
+          >
+            About Me
+          </motion.h1>
 
-        {/* Profile Section */}
-        <motion.div
-          variants={item}
-          className="flex flex-col md:flex-row items-center gap-12 max-w-5xl"
-        >
-          <Foto />
-
-          <div className="max-w-xl space-y-6">
-            <p className="text-gray-400 leading-relaxed text-justify">
-              Halo, saya Vauzi Tri Utomo. Saya memiliki minat besar dalam
-              pengembangan web dan game. Saya suka membangun sesuatu dari nol
-              hingga menjadi aplikasi yang bisa digunakan orang lain.
+          {/* Description */}
+          <motion.div
+            variants={item}
+            className="space-y-6 text-muted text-lg leading-relaxed"
+          >
+            <p>
+              Hello, my name is Vauzi Tri Utomo. I have a strong passion for web and game development. I truly enjoy building something from the ground up and transforming it into an application that can be used and appreciated by many people.
             </p>
 
-            <p className="text-gray-400 leading-relaxed text-justify">
-              Saat ini saya fokus belajar Next.js, React, serta pengembangan
-              game menggunakan Unity. Saya terus berusaha meningkatkan skill
-              dan memahami konsep secara mendalam.
+            <p>
+              Currently, I am focusing on learning web development and basic game development using Unity. In addition, I am also exploring Android development with Kotlin in Android Studio. I am continuously improving my skills and deepening my understanding of core concepts step by step, striving to become a better and more capable developer each day.
             </p>
-          </div>
-        </motion.div>
+          </motion.div>
 
-        {/* Skills Section */}
-        <motion.div
-          variants={item}
-          className="w-full max-w-3xl"
-        >
-          <h2 className="text-2xl font-semibold mb-8 text-center">
-            My Skills
-          </h2>
+          {/* Skills Section */}
+          <motion.div variants={item} className="space-y-8">
+            <h2 className="text-3xl font-semibold text-center text-main">
+              Skills
+            </h2>
 
-          <div className="space-y-6">
-            {skills.map((skill, index) => (
-              <div key={index}>
-                <div className="flex justify-between mb-2">
-                  <span>{skill.name}</span>
-                  <span className="text-sm text-gray-400">
-                    {skill.level}%
-                  </span>
-                </div>
-
-                <div className="w-full bg-neutral-800 rounded-full h-2">
-                  <motion.div
-                    initial={{ width: 0 }}
-                    animate={{ width: `${skill.level}%` }}
-                    transition={{ duration: 1, delay: index * 0.2 }}
-                    className="h-2 bg-white rounded-full"
-                  />
-                </div>
-              </div>
-            ))}
-          </div>
-        </motion.div>
-
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
+              {skills.map((skill, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: index * 0.1 }}
+                  className="
+                    p-6 rounded-xl border border-main
+                    bg-card text-main
+                    text-center font-medium
+                    transition-all duration-300
+                    hover:-translate-y-1 hover:shadow-lg
+                  "
+                >
+                  {skill}
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+        </div>
       </motion.main>
     </>
   );
