@@ -12,7 +12,7 @@ export default function Cv() {
                  border-2 border-white 
                  rounded-lg font-semibold 
                  transition-all duration-300
-                 hover:bg-black hover:text-white"
+                 hover:bg-black hover:text-white text-center"
     >
       Download CV
     </Link>

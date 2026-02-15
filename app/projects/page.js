@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { container, item } from "@/lib/animations";
+import { container, item, card, cardContainer } from "@/lib/animations";
 
 import Navbar from "@/components/Navbar";
 import ProjectCard from "@/components/ProjectCard";
@@ -75,13 +75,20 @@ export default function Projects() {
           A collection of web applications and development projects that showcase my skills in front end and back end technologies. These projects reflect my ability to solve problems, build functional systems, and create user friendly digital experiences.
         </motion.p>
 
-        <motion.div variants={item} className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 pb-24">
+        <motion.div 
+          variants={cardContainer}
+          className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 pb-24"
+        >
           {projects.map((project, index) => (
-            <ProjectCard
+            <motion.div
               key={index}
-              project={project}
-              onClick={() => setSelected(project)}
-            />
+              variants={card}
+            >
+              <ProjectCard
+                project={project}
+                onClick={() => setSelected(project)}
+              />
+            </motion.div>
           ))}
         </motion.div>
       </motion.main>

@@ -20,6 +20,8 @@ export default function ProjectModal({ project, onClose }) {
         );
     };
 
+    
+
     return (
         <motion.div
             initial={{ opacity: 0 }}
@@ -34,11 +36,19 @@ export default function ProjectModal({ project, onClose }) {
                 exit={{ scale: 0.9, opacity: 0 }}
                 transition={{ duration: 0.3 }}
                 onClick={(e) => e.stopPropagation()}
-                className="relative bg-neutral-900 border border-gray-700 w-full max-w-5xl 
-           h-[90vh] md:h-auto
-           rounded-xl p-6 md:p-8
-           flex flex-col md:grid md:grid-cols-2 
-           gap-6 overflow-y-auto"
+                className="
+  relative 
+  bg-neutral-900 border border-gray-700 
+  w-full max-w-5xl
+  max-h-[90vh] md:h-auto
+  rounded-xl
+  p-5 md:p-8
+  flex flex-col md:grid md:grid-cols-2 
+  gap-6 
+  overflow-y-auto
+"
+
+
 
             >
                 {/* Close Button */}
@@ -50,14 +60,14 @@ export default function ProjectModal({ project, onClose }) {
                 </button>
 
                 {/* Left - Slider */}
-                <div className="relative w-full max-h-[60vh] overflow-y-auto rounded-lg bg-black flex justify-center">
-                    <Image
-                        src={project.gallery[current]}
-                        alt="Project Image"
-                        width={600}
-                        height={1000}
-                        className="object-contain w-auto h-auto"
-                    />
+                <div className="relative w-full aspect-[16/9] md:max-h-[60vh] rounded-lg bg-black flex items-center justify-center overflow-hidden">
+  <Image
+    src={project.gallery[current]}
+    alt="Project Image"
+    fill
+    className="object-contain"
+  />
+
 
                     {/* Left & Right Arrow */}
                     {project.gallery.length > 1 && (
@@ -87,7 +97,8 @@ export default function ProjectModal({ project, onClose }) {
 
 
                 {/* Right - Info */}
-                <div className="flex flex-col justify-between h-full space-y-8">
+                <div className="flex flex-col space-y-6 mt-4 md:mt-0">
+
 
                     {/* Top Content */}
                     <div className="space-y-5">

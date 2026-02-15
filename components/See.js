@@ -11,7 +11,7 @@ export default function See() {
                  border-2 border-white 
                  rounded-lg font-semibold 
                  transition-all duration-300
-                 hover:bg-black hover:text-white"
+                 hover:bg-black hover:text-white text-center"
     >
       See My Work
     </Link>
