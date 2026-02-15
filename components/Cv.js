@@ -7,15 +7,15 @@ export default function Cv() {
     <Link
       href="/CV.pdf"
       target="_blank"
-      className="inline-block px-6 py-3 
-                 bg-white text-black 
-                 border-2 border-white 
-                 rounded-lg font-semibold 
-                 transition-all duration-300
-                 hover:bg-black hover:text-white text-center"
+      className="
+        inline-block px-6 py-3 rounded-lg font-semibold text-center
+        transition-all duration-300 border
+
+        bg-card text-main border-main
+        hover:opacity-50 transition
+      "
     >
       Download CV
     </Link>
   );
 }
-
