@@ -40,8 +40,8 @@ export default function Projects() {
       title: "Tic Cat Dog",
       description: "Game tic-tac-toe with a cat and dog theme, using HTML, CSS, and JavaScript to create an interactive and fun game.",
       tech: "html • css • js",
-      image: "/ticcatdog.png",
-      gallery: ["/ticcatdog.png", "/ticcatdog.png"],
+      image: "/TicCatDog.png",
+      gallery: ["/TicCatDog.png", "/TicCatDog.png"],
       link: "https://github.com/Vauzi-17/TicCatDog",
     },
     {
