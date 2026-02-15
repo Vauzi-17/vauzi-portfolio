@@ -8,11 +8,9 @@ export default function Navbar() {
     <div
       className="
         fixed bottom-6 left-1/2 -translate-x-1/2
-        backdrop-blur-md px-6 py-3 rounded-full shadow-xl
-        flex gap-8 items-center z-50 border
-
-        bg-white/80 border-gray-200
-        dark:bg-neutral-900/80 dark:border-gray-700
+        backdrop-blur-md px-6 py-3 rounded-full
+        shadow-xl flex gap-8 items-center z-50
+        border bg-card border-main
       "
     >
       <NavItem href="/" icon={<Home size={22} />} label="Home" />
@@ -29,23 +27,22 @@ function NavItem({ href, icon, label }) {
       href={href}
       className="
         group relative flex flex-col items-center
-        text-black dark:text-white
-        transition
+        text-main transition hover:opacity-80
       "
     >
       {icon}
 
       <span
         className="
-          absolute -top-8 scale-0 group-hover:scale-100
-          transition text-xs px-2 py-1 rounded-md
-
-          bg-black text-white
-          dark:bg-white dark:text-black
-        "
+    absolute -top-8 scale-0 group-hover:scale-100
+    transition text-xs px-2 py-1 rounded-md
+    bg-[var(--text)] text-[var(--bg)]
+    border border-main
+  "
       >
         {label}
       </span>
+
     </Link>
   );
 }
