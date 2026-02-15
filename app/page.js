@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { container, item } from "@/lib/animations";
+import { container, item, hero } from "@/lib/animations";
 
 import Navbar from "@/components/Navbar";
 import Social from "@/components/Social";
@@ -31,7 +31,7 @@ export default function Home() {
 
         {/* Nama */}
         <motion.h1
-          variants={item}
+          variants={hero}
           className="text-4xl font-bold text-center text-main"
         >
           Vauzi Tri Utomo
@@ -39,7 +39,7 @@ export default function Home() {
 
         {/* Subtitle */}
         <motion.h2
-          variants={item}
+          variants={hero}
           className="text-lg font-semibold text-center text-muted"
         >
           Web Developer Student | Aspiring Full Stack Developer
@@ -47,7 +47,7 @@ export default function Home() {
 
         {/* Description */}
         <motion.p
-          variants={item}
+          variants={hero}
           className="
             text-lg max-w-lg text-center md:text-justify
             leading-relaxed text-muted
