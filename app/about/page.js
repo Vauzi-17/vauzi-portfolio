@@ -3,14 +3,15 @@
 import { motion } from "framer-motion";
 import { container, item } from "@/lib/animations";
 import Navbar from "@/components/Navbar";
+import { Code2, Palette, Braces, Smartphone, Gamepad2 } from "lucide-react";
 
 export default function About() {
   const skills = [
-    "HTML",
-    "CSS",
-    "JavaScript",
-    "Kotlin",
-    "Unity (Basic)",
+    { name: "HTML", icon: Code2 },
+    { name: "CSS", icon: Palette },
+    { name: "JavaScript", icon: Braces },
+    { name: "Kotlin", icon: Smartphone },
+    { name: "Unity (Basic)", icon: Gamepad2 },
   ];
 
   return (
@@ -52,24 +53,37 @@ export default function About() {
               Skills
             </h2>
 
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
-              {skills.map((skill, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: index * 0.1 }}
-                  className="
-                    p-6 rounded-xl border border-main
-                    bg-card text-main
-                    text-center font-medium
-                    transition-all duration-300
-                    hover:-translate-y-1 hover:shadow-lg
-                  "
-                >
-                  {skill}
-                </motion.div>
-              ))}
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6">
+              {skills.map((skill, index) => {
+                const Icon = skill.icon;
+                return (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: index * 0.1 }}
+                    className="
+                      group relative
+                      p-6 rounded-2xl border-2 border-main/20
+                      bg-gradient-to-br from-card to-card/50
+                      text-main
+                      flex flex-col items-center justify-center gap-3
+                      transition-all duration-300
+                      hover:border-main hover:-translate-y-2 
+                      hover:shadow-xl hover:shadow-main/10
+                      cursor-pointer
+                    "
+                  >
+                    <Icon 
+                      className="w-8 h-8 transition-transform duration-300 group-hover:scale-110" 
+                      strokeWidth={2}
+                    />
+                    <span className="font-semibold text-sm text-center">
+                      {skill.name}
+                    </span>
+                  </motion.div>
+                );
+              })}
             </div>
           </motion.div>
         </div>
