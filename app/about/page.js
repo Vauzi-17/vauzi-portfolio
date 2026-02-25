@@ -39,11 +39,11 @@ export default function About() {
             className="space-y-6 text-muted text-lg leading-relaxed"
           >
             <p>
-              Hello, my name is Vauzi Tri Utomo. I have a strong passion for web and game development. I truly enjoy building something from the ground up and transforming it into an application that can be used and appreciated by many people.
+              Hello, my name is Vauzi Tri Utomo, a software engineering student at SMK Telkom Purwokerto with a strong interest in web development. I am passionate about transforming ideas into functional and impactful web applications.
             </p>
 
             <p>
-              Currently, I am focusing on learning web development and basic game development using Unity. In addition, I am also exploring Android development with Kotlin in Android Studio. I am continuously improving my skills and deepening my understanding of core concepts step by step, striving to become a better and more capable developer each day.
+              I am currently focused on strengthening my skills in modern web development, continuously improving my understanding of fundamental concepts, and building projects that are structured, efficient, and user-friendly. My goal is to grow into a reliable and skilled web developer.
             </p>
           </motion.div>
 
