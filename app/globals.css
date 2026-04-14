@@ -52,3 +52,14 @@ body {
 .overlay-bg {
   background-color: var(--overlay);
 }
+
+.top-fade {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 180px;
+  background: linear-gradient(to bottom, var(--card) 0%, transparent 100%);
+  pointer-events: none;
+  z-index: 10;
+}
