@@ -4,6 +4,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { container, item } from "@/lib/animations";
 import Navbar from "@/components/Navbar";
+import GridLine from "@/components/GridLine";
 
 export default function Contact() {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
@@ -42,12 +43,12 @@ export default function Contact() {
   return (
     <>
       <Navbar />
-
+<GridLine className="bg-main">
       <motion.main
         variants={container}
         initial="hidden"
         animate="show"
-        className="min-h-screen px-6 py-24 flex flex-col items-center bg-main"
+        className="min-h-screen px-6 py-24 flex flex-col items-center"
       >
         <motion.h1
           variants={item}
@@ -126,6 +127,7 @@ export default function Contact() {
           </button>
         </motion.form>
       </motion.main>
+      </GridLine>
     </>
   );
 }
