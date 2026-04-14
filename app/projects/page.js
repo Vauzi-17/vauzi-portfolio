@@ -7,6 +7,7 @@ import { container, item, card, cardContainer } from "@/lib/animations";
 import Navbar from "@/components/Navbar";
 import ProjectCard from "@/components/ProjectCard";
 import ProjectModal from "@/components/ProjectModal";
+import DotPattern from "@/components/DotPattern";
 
 export default function Projects() {
   const [selected, setSelected] = useState(null);
@@ -58,6 +59,7 @@ export default function Projects() {
     <>
       <Navbar />
 
+      <DotPattern className="bg-main">
       <motion.main
         variants={container}
         initial="hidden"
@@ -92,6 +94,7 @@ export default function Projects() {
           ))}
         </motion.div>
       </motion.main>
+        </DotPattern>
 
       <AnimatePresence>
         {selected && (
